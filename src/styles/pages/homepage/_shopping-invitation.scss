@@ -1,0 +1,22 @@
+.shopping-invitation {
+  padding: 40px 14px;
+  background: linear-gradient(180deg, rgba(255, 246, 236, 0) 0%, #fff6ec 100%);
+
+  &__card {
+    background: linear-gradient(180deg, #ffdeb7 0%, #ffa235 100%);
+
+    transition: all 5s linear;
+
+    @media (min-width: 768px) {
+      background: #fff6ec;
+
+      &:hover {
+        background: linear-gradient(180deg, #ffdeb7 0%, #ffa235 100%);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px 64px;
+  }
+}

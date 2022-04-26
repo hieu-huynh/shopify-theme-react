@@ -46,65 +46,115 @@
 
 <footer class="footer emma-footer px-16	 bg-charade  text-white">
     <div class="emma-footer__top">
-        <div class="emma-footer__top__item">
-            <div class="emma-footer__top__item__header">
-                Join for Exclusive Offers
-            </div>
-            <div class="emma-footer__top__item__content">
-                {%- form 'customer', id: 'ContactFooter', class: 'emma-newsletter' -%}
-                <div>
-                    <input type="hidden" name="contact[tags]" value="newsletter">
+        <div>
+            <div class="emma-footer__top__item">
+                <div class="emma-footer__top__item__header">
+                    Join for Exclusive Offers
+                </div>
+                <div class="emma-footer__top__item__content">
+                    {%- form 'customer', id: 'ContactFooter', class: 'emma-newsletter' -%}
                     <div>
-                        <div class="field emma-newsletter__field">
-                            <input
-                                    id="NewsletterForm--{{ section.id }}"
-                                    type="email"
-                                    name="contact[email]"
-                                    class="emma-field__input"
-                                    value="{{ form.email }}"
-                                    aria-required="true"
-                                    autocorrect="off"
-                                    autocapitalize="off"
-                                    autocomplete="email"
-                                    {% if form.errors %}
-                                        autofocus
-                                        aria-invalid="true"
-                                        aria-describedby="ContactFooter-error"
-                                    {% elsif form.posted_successfully? %}
-                                        aria-describedby="ContactFooter-success"
-                                    {% endif %}
-                                    placeholder="Email"
-                                    required
-                            >
-                            <button type="submit" class="field__button emma-newsletter__button" name="commit"
-                                    id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                                Subscribe
-                            </button>
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <div>
+                            <div class="field emma-newsletter__field">
+                                <input
+                                        id="NewsletterForm--{{ section.id }}"
+                                        type="email"
+                                        name="contact[email]"
+                                        class="emma-field__input"
+                                        value="{{ form.email }}"
+                                        aria-required="true"
+                                        autocorrect="off"
+                                        autocapitalize="off"
+                                        autocomplete="email"
+                                        {% if form.errors %}
+                                            autofocus
+                                            aria-invalid="true"
+                                            aria-describedby="ContactFooter-error"
+                                        {% elsif form.posted_successfully? %}
+                                            aria-describedby="ContactFooter-success"
+                                        {% endif %}
+                                        placeholder="Email"
+                                        required
+                                >
+                                <button type="submit" class="field__button emma-newsletter__button" name="commit"
+                                        id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                                    Subscribe
+                                </button>
+                            </div>
+                            {%- if form.errors -%}
+                                <small class="newsletter-form__message form__message"
+                                       id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                            {%- endif -%}
                         </div>
-                        {%- if form.errors -%}
-                            <small class="newsletter-form__message form__message"
-                                   id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                        {%- if form.posted_successfully? -%}
+                            <h3 class="newsletter-form__message newsletter-form__message--success form__message"
+                                id="ContactFooter-success" tabindex="-1"
+                                autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
                         {%- endif -%}
                     </div>
-                    {%- if form.posted_successfully? -%}
-                        <h3 class="newsletter-form__message newsletter-form__message--success form__message"
-                            id="ContactFooter-success" tabindex="-1"
-                            autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
-                    {%- endif -%}
+                    <div class="emma-newsletter__checkbox">
+                        <input type="checkbox" id="ContactFooterCheckbox" name="customer[accepts_marketing]"
+                               value="privacypolicy">
+                        <label for="ContactFooterCheckbox">Yes, I would like to receive newsletters, and I have read and
+                            accepted the <a class="emma-footer__link" href="/pages/privacy-policy">privacy
+                                policy.</a></label>
+                    </div>
+                    {% comment %} <div><a href="#" class="emma-text--white emma-link--small">How do I unsubscribe?</a></div> {% endcomment %}
+                    <div>The email address will naturally be cared for according to our strict <a class="emma-footer__link"
+                                                                                                  href="/pages/privacy-policy">privacy
+                            policy.</a></div>
                 </div>
-                <div class="emma-newsletter__checkbox">
-                    <input type="checkbox" id="ContactFooterCheckbox" name="customer[accepts_marketing]"
-                           value="privacypolicy">
-                    <label for="ContactFooterCheckbox">Yes, I would like to receive newsletters, and I have read and
-                        accepted the <a class="emma-footer__link" href="/pages/privacy-policy">privacy
-                            policy.</a></label>
-                </div>
-                {% comment %} <div><a href="#" class="emma-text--white emma-link--small">How do I unsubscribe?</a></div> {% endcomment %}
-                <div>The email address will naturally be cared for according to our strict <a class="emma-footer__link"
-                                                                                              href="/pages/privacy-policy">privacy
-                        policy.</a></div>
+                {%- endform -%}
             </div>
-            {%- endform -%}
+
+            <div class="emma-footer__navigation">
+                <div class="emma-footer__navigation-container">
+                    <div class="emma-footer__navigation__item">
+                        <div class="emma-footer__navigation__head">
+                            About us
+                        </div>
+                        <ul class="emma-footer__navigation__links">
+                            <li><a href="https://www.youtube.com/channel/UCen9M2ptIoK-GimoDpPsF8w"
+                                   target="_blank">Design</a></li>
+                            <li><a href="https://team.emma-sleep.com/team" target="_blank">Team</a></li>
+                            <li><a href="https://www.emma-sleep.com/blogs/stories" target="_blank">Blog</a></li>
+                            <li><a href="https://team.emma-sleep.com/press/releases" target="_blank">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="emma-footer__navigation__item">
+                        <div class="emma-footer__navigation__head">
+                            Shopping
+                        </div>
+                        <ul class="emma-footer__navigation__links">
+                            <li><a href="/pages/black-friday-bundles-terms-and-conditions">Promotion Terms & Conditions </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="emma-footer__navigation__item">
+                        <div class="emma-footer__navigation__head">
+                            Shipping with
+                        </div>
+                        <ul class="emma-footer__navigation__links">
+                            <li><a>FedEx</a></li>
+                            <li><a>UPS</a></li>
+                        </ul>
+                    </div>
+
+                    {% comment %}<div class="emma-footer__navigation__item">{% endcomment %}
+                    {% comment %}<div class="emma-footer__navigation__head">{% endcomment %}
+                    {% comment %}Payment Methods{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                    {% comment %}<ul class="emma-footer__navigation__links">{% endcomment %}
+                    {% comment %}<li><a class="emma-footer__link--with-image"><img src="{{ 'icon-mastercard.svg' | asset_url }}" loading="eager" width="16" height="16"/>Mastercard</a></li>{% endcomment %}
+                    {% comment %}<li><a class="emma-footer__link--with-image"><img src="{{ 'icon-visa.svg' | asset_url }}" loading="eager" width="16" height="16"/>Visa</a></li>{% endcomment %}
+                    {% comment %}<li><a class="emma-footer__link--with-image" href="https://www.affirm.com/licenses" target="_blank"><img src="{{ 'icon-installments.svg' | asset_url }}" loading="eager" width="16" height="16"/> Installments</a></li>{% endcomment %}
+                    {% comment %}</ul>{% endcomment %}
+                    {% comment %}</div>{% endcomment %}
+                </div>
+            </div>
         </div>
 
         {% comment %}<div class="emma-footer__top__item">{% endcomment %}
@@ -124,53 +174,7 @@
         {% comment %}</div>{% endcomment %}
         {% comment %}</div>{% endcomment %}
 
-        <div class="emma-footer__navigation">
-            <div class="emma-footer__navigation-container">
-                <div class="emma-footer__navigation__item">
-                    <div class="emma-footer__navigation__head">
-                        About us
-                    </div>
-                    <ul class="emma-footer__navigation__links">
-                        <li><a href="https://www.youtube.com/channel/UCen9M2ptIoK-GimoDpPsF8w"
-                               target="_blank">Design</a></li>
-                        <li><a href="https://team.emma-sleep.com/team" target="_blank">Team</a></li>
-                        <li><a href="https://www.emma-sleep.com/blogs/stories" target="_blank">Blog</a></li>
-                        <li><a href="https://team.emma-sleep.com/press/releases" target="_blank">Press</a></li>
-                    </ul>
-                </div>
 
-                <div class="emma-footer__navigation__item">
-                    <div class="emma-footer__navigation__head">
-                        Shopping
-                    </div>
-                    <ul class="emma-footer__navigation__links">
-                        <li><a href="/pages/black-friday-bundles-terms-and-conditions">Promotion Terms & Conditions </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="emma-footer__navigation__item">
-                    <div class="emma-footer__navigation__head">
-                        Shipping with
-                    </div>
-                    <ul class="emma-footer__navigation__links">
-                        <li><a>FedEx</a></li>
-                        <li><a>UPS</a></li>
-                    </ul>
-                </div>
-
-                {% comment %}<div class="emma-footer__navigation__item">{% endcomment %}
-                {% comment %}<div class="emma-footer__navigation__head">{% endcomment %}
-                {% comment %}Payment Methods{% endcomment %}
-                {% comment %}</div>{% endcomment %}
-                {% comment %}<ul class="emma-footer__navigation__links">{% endcomment %}
-                {% comment %}<li><a class="emma-footer__link--with-image"><img src="{{ 'icon-mastercard.svg' | asset_url }}" loading="eager" width="16" height="16"/>Mastercard</a></li>{% endcomment %}
-                {% comment %}<li><a class="emma-footer__link--with-image"><img src="{{ 'icon-visa.svg' | asset_url }}" loading="eager" width="16" height="16"/>Visa</a></li>{% endcomment %}
-                {% comment %}<li><a class="emma-footer__link--with-image" href="https://www.affirm.com/licenses" target="_blank"><img src="{{ 'icon-installments.svg' | asset_url }}" loading="eager" width="16" height="16"/> Installments</a></li>{% endcomment %}
-                {% comment %}</ul>{% endcomment %}
-                {% comment %}</div>{% endcomment %}
-            </div>
-        </div>
 
         <div id="emma-footer__customer-support">
             <div class=""><h6 class="heading-6 mb-4">Customer Support</h6>
@@ -191,9 +195,9 @@
 </footer>
 
 <script defer type="module">
-    ReactDOM.render(window.Layouts.Copyright(), document.getElementById("emma-footer__copyright"))
-
-    ReactDOM.render(window.Layouts.FollowUs(), document.getElementById("emma-footer__follow-us"))
+    // ReactDOM.render(window.Layouts.Copyright(), document.getElementById("emma-footer__copyright"))
+    //
+    // ReactDOM.render(window.Layouts.FollowUs(), document.getElementById("emma-footer__follow-us"))
 
 </script>
 

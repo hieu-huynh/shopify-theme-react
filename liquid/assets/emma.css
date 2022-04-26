@@ -1,37 +1,36 @@
-/* Emma Top Banner */
+/*!* Emma Top Banner *!*/
 
-html {
-    font-size: 90%;
-    font-family: Acumin Pro, "acumin-pro", sans-serif;
-}
+/*html {*/
+/*    font-size: 90%;*/
+/*    font-family: Acumin Pro, "acumin-pro", sans-serif;*/
+/*}*/
 
-h1,
-h2 {
-    color: #3C4196;
-    font-family: Utopia Std, serif;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 100%;
-}
+/*h1,*/
+/*h2 {*/
+/*    font-family: Utopia Std, serif;*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    line-height: 100%;*/
+/*}*/
 
-h1 {
-    font-size: 4rem;
-}
+/*h1 {*/
+/*    font-size: 4rem;*/
+/*}*/
 
-h2 {
-    font-size: 3rem;
-    line-height: 123%;
-}
+/*h2 {*/
+/*    font-size: 3rem;*/
+/*    line-height: 123%;*/
+/*}*/
 
-h3,
-h4,
-h5,
-h6 {
-    font-family: Proxima Nova, "proxima-nova", Acumin Pro, "acumin-pro", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 150%;
-}
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*    font-family: Proxima Nova, "proxima-nova", Acumin Pro, "acumin-pro", sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    line-height: 150%;*/
+/*}*/
 
 a {
     color: black;

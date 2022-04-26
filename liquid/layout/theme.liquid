@@ -84,7 +84,6 @@
 
         html {
         box-sizing: border-box;
-        font-size: 62.5%;
         height: 100%;
         }
 
@@ -187,9 +186,6 @@
     <link rel="alternate" hreflang="zh-TW" href="https://www.emma-sleep.com.tw/">
     <link rel="alternate" hreflang="en-VN" href="https://www.emma-sleep.vn/">
     <link rel="alternate" hreflang="en-US" href="https://www.emma-sleep.com/">
-
-    {{ 'main.css' | asset_url | stylesheet_tag }}
-    {{ 'main.js' | asset_url | script_tag }}
 </head>
 
 <body class="gradient">
@@ -209,6 +205,9 @@
 
 
 {% section 'footer' %}
+
+<script src="{{ 'aos.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
 
 
 <script defer type="module" src="{{ "bundle.js" | asset_url }}"></script>

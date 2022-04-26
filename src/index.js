@@ -10,3 +10,6 @@ ReactDOM.render(
   <App title={title} />,
   document.getElementById('app')
 );
+
+window.React = React
+window.ReactDOM  = ReactDOM

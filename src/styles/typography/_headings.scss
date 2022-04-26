@@ -1,5 +1,5 @@
 .heading-2 {
-  font-family: 'Test Tiempos Headline';
+  font-family: 'Tiempos';
   font-style: normal;
   font-weight: 400;
   font-size: 39px;
@@ -7,7 +7,7 @@
 }
 
 .heading-3 {
-  font-family: 'Test Tiempos Headline';
+  font-family: 'Tiempos';
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -16,13 +16,14 @@
 
 }
 
-.heading-6 {
+.heading-4 {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
+
 
 .subheading {
   font-family: 'Inter';
@@ -30,4 +31,12 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+}
+
+a, p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }

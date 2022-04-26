@@ -1,34 +1,25 @@
-//@font-face {
-//  font-family: 'Inter';
-//  src: url('../../public/assets/Inter-Regular.ttf') format('truetype');
-//  font-weight: normal;
-//}
-//
-//@font-face {
-//  font-family: 'Inter';
-//  src: url('../../public/assets/Inter-Bold.ttf') format('truetype');
-//  font-weight: bold;
-//}
-//
-//@font-face {
-//  font-family: 'Inter';
-//  src: url('../../public/assets/Inter-SemiBold.ttf') format('truetype');
-//  font-weight: 600;
-//}
-//
-//@font-face {
-//  font-family: 'Tiempos';
-//  src: url('../../public/assets/test-tiempos-headline-regular.woff2')
-//    format('woff2');
-//  font-weight: normal;
-//}
-//@font-face {
-//  font-family: 'Tiempos';
-//  src: url('../../public/assets/test-tiempos-headline-regular-italic.woff2')
-//    format('woff2');
-//  font-weight: normal;
-//  font-style: italic;
-//}
+* {
+  font-variant-ligatures: none;
+}
+
+html {
+  scroll-padding-top: 10rem;
+  color: #2e2f3c;
+}
+
+body {
+  font-family: 'Inter';
+}
+
+model-viewer::part(default-progress-mask) {
+  display: none;
+}
+
+model-viewer::part(default-progress-bar) {
+  display: none;
+}
+
+
 
 /* Buttons */
 .menu-btn {
@@ -44,14 +35,11 @@
   display: inline-block;
   font-family: 'acumin-pro';
   font-weight: 600;
-  font-size: 1rem;
   cursor: pointer;
   border-radius: 1.5rem;
 }
 
 .circle {
-  height: 7.5rem;
-  width: 7.5rem;
   border-radius: 50%;
   display: inline-block;
   font-family: 'Inter';
@@ -60,18 +48,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 13px;
 }
 
 /* Navigation Items */
-.mattresses-dropdown:hover .dropdown {
-  display: flex !important;
+.mattresses:hover .mattresses-dropdown{
+  display: flex;
+}
+
+.beds:hover .beds-dropdown{
+  display: flex;
+}
+
+.accessories:hover .accessories-dropdown{
+  display: flex;
 }
 
 .gradient-background {
   background: linear-gradient(0deg, #ffffff 0%, rgba(255, 137, 0, 0.3) 100%);
 }
 
-.card:hover .gradient-background {
-  background: linear-gradient(0deg, #ffffff 0%, rgb(255, 137, 0) 100%);
+.card {
+  display: flex;
+  flex-flow:column;
+  justify-content: space-between;
 }
 
+.linear-gradient-bg:hover {
+  background: linear-gradient(180deg, #ffdeb7 0%, #ffa235 100%);
+  transition: opacity 5s linear;
+}
+.card:hover .gradient-background {
+  background: linear-gradient(0deg, #FFFFFF 0%, rgb(255, 137, 0) 100%);
+}
+
+@media (min-width: 1024px) {
+.gradient-background {
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 137, 0, 0.3) 100%);
+  }
+}
+
+.sale-bagde {
+ color: white;
+ background-color: #F03306;
+ width: max-content;
+ border-radius: 4px;
+ padding: 4px;
+ font-size: 11px;
+ font-weight: bold;
+}

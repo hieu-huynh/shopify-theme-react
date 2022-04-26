@@ -1,0 +1,21 @@
+.our-blog-section {
+  overflow: hidden;
+  padding: 40px 14px 60px;
+  background: linear-gradient(0deg, rgba(255, 246, 236, 0) 0%, #FFF6EC 100%);
+  .wallpaper {
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+
+    width: 500px;
+    height: 500px;
+
+    background: linear-gradient(0deg, rgba(255, 162, 53, 0) 0%, #FF8900 100%);
+    opacity: 0.4;
+    border-radius: 100%;
+  }
+
+  @media (min-width: 768px) {
+    padding: 60px 64px;
+  }
+}
