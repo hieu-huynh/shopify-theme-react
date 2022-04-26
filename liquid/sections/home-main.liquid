@@ -1,0 +1,85 @@
+<div id="app">Loading...</div>
+
+<script src="{{ 'aos.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+    "name": "Home Main",
+    "settings":
+        [{
+            "id": "hero_subtitle",
+            "type": "text",
+            "label": "Hero Subtitle",
+            "default": "Enter text here"
+        },
+        {
+            "id": "hero_title",
+            "type": "richtext",
+            "label": "Hero Title",
+            "default": "<p>Text.</p>"
+        },
+        {
+            "id": "hero_cta",
+            "type": "text",
+            "label": "Hero CTA text",
+            "default": "Enter text here"
+        },
+        {
+            "id": "hero_url",
+            "type": "url",
+            "label": "Hero URL"
+        },
+        {
+            "id": "hero_image",
+            "type": "image_picker",
+            "label": "Hero Image"
+        },
+        {
+            "id": "subhero_image1",
+            "type": "image_picker",
+            "label": "Subhero Image 1"
+        },
+        {
+            "id": "subhero_image2",
+            "type": "image_picker",
+            "label": "Subhero Image 2"
+        },
+        {
+            "id": "subhero_text",
+            "type": "text",
+            "label": "Subhero Text",
+            "default": "Enter text here"
+        },
+		{
+            "id": "subhero_text2",
+            "type": "text",
+            "label": "Subhero Text 2",
+            "default": "Enter text here"
+        }],
+        "presets":
+        [{
+            "name": "custom-text",
+            "category": "Custom"
+        }],
+        "blocks":
+        [{
+            "type": "home_banner",
+            "name": "Home Banner",
+            "settings": [
+                {
+                    "type":"text",
+                    "id":"banner_title",
+                    "label":"Banner Title",
+                    "default": "Title"
+                 },
+                 {
+                    "type":"text",
+                    "id":"banner_body",
+                    "label":"Banner Body",
+                    "default": "Insert text here"
+                 }
+            ]
+        }]
+    }
+{% endschema %}

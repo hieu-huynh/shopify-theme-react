@@ -1,0 +1,77 @@
+//@font-face {
+//  font-family: 'Inter';
+//  src: url('../../public/assets/Inter-Regular.ttf') format('truetype');
+//  font-weight: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Inter';
+//  src: url('../../public/assets/Inter-Bold.ttf') format('truetype');
+//  font-weight: bold;
+//}
+//
+//@font-face {
+//  font-family: 'Inter';
+//  src: url('../../public/assets/Inter-SemiBold.ttf') format('truetype');
+//  font-weight: 600;
+//}
+//
+//@font-face {
+//  font-family: 'Tiempos';
+//  src: url('../../public/assets/test-tiempos-headline-regular.woff2')
+//    format('woff2');
+//  font-weight: normal;
+//}
+//@font-face {
+//  font-family: 'Tiempos';
+//  src: url('../../public/assets/test-tiempos-headline-regular-italic.woff2')
+//    format('woff2');
+//  font-weight: normal;
+//  font-style: italic;
+//}
+
+/* Buttons */
+.menu-btn {
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  padding: 10px 16px 8px 16px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'acumin-pro';
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+.circle {
+  height: 7.5rem;
+  width: 7.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  font-family: 'Inter';
+  font-weight: 700;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation Items */
+.mattresses-dropdown:hover .dropdown {
+  display: flex !important;
+}
+
+.gradient-background {
+  background: linear-gradient(0deg, #ffffff 0%, rgba(255, 137, 0, 0.3) 100%);
+}
+
+.card:hover .gradient-background {
+  background: linear-gradient(0deg, #ffffff 0%, rgb(255, 137, 0) 100%);
+}
+
