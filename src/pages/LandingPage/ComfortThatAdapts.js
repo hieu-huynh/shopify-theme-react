@@ -5,7 +5,7 @@ export default class ComfortThatAdapts extends React.Component {
     return (
       <section className="px-3 pb-8 pt-6 lg:pt-10 lg:pb-14">
         <h2 className="text-center font-['Tiempos'] text-3xl lg:text-[39px]">
-          Comfort that <span className="italic">adapts</span>
+          Comfort that <span className="italic font-thin">adapts</span>
         </h2>
         <h3 className="w-full lg:w-3/5 text-center mx-auto text-comet px-2 lg:px-0">
           Let your mattress adapt to you—not the other way around. Our

@@ -4,7 +4,7 @@ export default function ComfortCelecratedAndTrusted() {
   return (
     <section className="px-3 py-8 bg-gradient-to-b from-athens-gray to-[#F6F6F9] text-center">
       <h2 className="font-['Tiempos'] text-3xl lg:text-[39px] lg:w-2/5 lg:mx-auto">
-        Comfort <span className="italic">celebrated & trusted </span>
+        Comfort <span className="italic font-thin">celebrated & trusted </span>
         around the world
       </h2>
       <p className="font-['Inter'] text-neutral-800 lg:text-xl">

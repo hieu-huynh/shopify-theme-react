@@ -28,7 +28,7 @@ export default class WhyUs extends React.Component {
       <section className="why-us-section flex justify-center w-full bg-athens-gray">
         <div className="flex flex-col items-center w-11/12 md:w-9/12">
           <h2 className="heading-2 text-center">
-            Why sleepers <span className="italic">love</span> Emma
+            Why sleepers <span className="italic font-thin">love</span> Emma
           </h2>
 
           <div className="grid grid-rows-3 gap-8  md:flex md:flex-nowrap mt-9 md:mt-14">

@@ -46,7 +46,7 @@ export default class OurBlog extends React.Component {
     return (
       <section className="our-blog-section relative flex flex-col items-center w-full">
         <h2 className="heading-2 text-center z-20">
-          Wake up to <i>better, happier</i> mornings
+          Wake up to <i className="font-thin">better, happier</i> mornings
         </h2>
 
         <h4 className="z-20 heading-4 text-comet mt-2.5 font-normal">

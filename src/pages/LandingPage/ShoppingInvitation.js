@@ -43,7 +43,7 @@ export default class ShoppingInvitation extends React.Component {
               rel="noreferrer"
             >
               <div className="flex flex-col items-start m-2.5 md:m-6">
-                <p className="hidden md:block py-1.5 px-2 rounded-[4px] bg-green-pea text-[white] text-[11px] md:text-[13px] uppercase">
+                <p className="hidden md:block mb-[10px] py-1.5 px-2 rounded-[4px] bg-green-pea text-[white] text-[11px] md:text-[13px] uppercase">
                   {badge}
                 </p>
                 <p className="text-[13px] md:text-[31px] text-charade font-semibold md:font-normal">
